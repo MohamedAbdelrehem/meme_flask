@@ -14,6 +14,6 @@ def get_meme():
 @app.route("/")
 def index():
     url,title = get_meme()
-    return render_template("meme_index.html",url=url,title=title)
+    return render_template("meme_index.html",meme_pic=url,title=title)
 
 app.run(host="0.0.0.0",port=80)
